@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.use('/', function(req, res, next) {
+app.use('/' || '/index', function(req, res, next) {
   res.write("HELLO FREND");
 });
 
