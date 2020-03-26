@@ -3,10 +3,10 @@ const app = express();
 const pool = require('./dbConnection');
 
 app.use('/' , function(req, res) {
-  var sql = "SELECT * FROM hats";
-    pool.connect();
+  var sql = "SELECT * FROM cats";
+    //pool.connect();
     console.log("pool connected");
-    /*
+
     pool.query(sql, function(err, result) {
         if(err) {
             console.log(err.code);
@@ -17,7 +17,7 @@ app.use('/' , function(req, res) {
         }
         res.send(result);
     });
-    */
+
    //pool.end();
    //console.log("pool ended");
 });
