@@ -9,8 +9,12 @@ const pool = new pg.Pool({
     port: 5432
 });
 */
+
+var connector = 'postgres://ifqhbkvidfemnj:b01af7ad1a34b0d69fdf4d6617ef71873dd02d0a5aad44c53e88f5416b59e225@ec2-34-193-232-231.compute-1.amazonaws.com:5432/dbbsvor9teh4sh';
+
 connectionString = {
-  connectionString: process.env.DATABASE_URL,
+  connectionString: process.env.DATABASE_URL || connector,
+  ssl: true
 };
 
 const pool = new pg.Pool(connectionString);
