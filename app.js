@@ -15,7 +15,7 @@ app.use('/' , function(req, res) {
             console.log(process.env.DATABASE_URL);
             res.status(404).send('Not Finding Orion');
         }
-        res.send(JSON.stringify(result));
+        res.send(result);
     });
 
    //pool.end();
